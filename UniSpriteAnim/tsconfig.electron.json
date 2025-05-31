@@ -3,9 +3,10 @@
   "compilerOptions": {
     "module": "commonjs",
     "outDir": "./dist/electron",
-    "rootDir": "./src/electron"
+    "rootDir": "./src" // Changed to allow ../core resolution
   },
   "include": [
-    "src/electron/**/*"
+    "src/electron/**/*",
+    "src/core/**/*" // Ensure core files are also considered by this config if not already by base
   ]
 }
